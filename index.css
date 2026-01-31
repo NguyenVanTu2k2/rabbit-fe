@@ -11,8 +11,10 @@
   --color-accent-500: #f97316;
   --color-accent-600: #ea580c;
 
-  --font-sans: Inter, system-ui, sans-serif;
+  --color-brand-orange: #f97316;
+  --color-brand-orangeHover: #ea580c;
 
+  --font-sans: Inter, system-ui, sans-serif;
   --radius-2xl: 1rem;
   --radius-3xl: 1.5rem;
 }
