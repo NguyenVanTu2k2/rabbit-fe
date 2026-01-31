@@ -2,10 +2,15 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Search, PlusCircle, MessageCircle, User, Menu, Bell } from 'lucide-react';
 import { useStore } from '../store/useStore';
+import { useNavigate } from "react-router-dom";
+
+
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, login } = useStore();
   const location = useLocation();
+  const navigate = useNavigate();
+
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -48,7 +53,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 </Link>
               </div>
             ) : (
-              <button onClick={login} className="text-brand-700 font-semibold px-4 py-2 hover:bg-brand-50 rounded-xl transition">
+              <button  onClick={() => navigate("/login")} className="text-brand-700 font-semibold px-4 py-2 hover:bg-brand-50 rounded-xl transition">
                 Đăng nhập
               </button>
             )}
