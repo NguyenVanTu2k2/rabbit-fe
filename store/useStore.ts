@@ -28,6 +28,7 @@ export const useStore = create<AppState>((set, get) => ({
       name: 'Nguyễn Văn Khách',
       avatar: 'https://picsum.photos/seed/user/200/200',
       role: 'user',
+      email:'nguyenvankhach@example.com',
       savedProperties: []
     }
   }),

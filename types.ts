@@ -52,6 +52,7 @@ export interface User {
   avatar: string;
   role: 'user' | 'agent' | 'admin';
   savedProperties: string[];
+  email: string;
 }
 
 export interface Project {
@@ -62,4 +63,15 @@ export interface Project {
   thumbnail: string;
   minPrice: string;
   location: string;
+}
+
+
+export interface AuthResponse {
+  token: string;
+  user: User;
+}
+
+export interface ApiError {
+  message: string;
+  code?: string;
 }

@@ -6,6 +6,7 @@ import { DetailPage } from './pages/DetailPage';
 import { Explore } from './pages/Explore';
 import { PostProperty } from './pages/PostProperty';
 import { useStore } from './store/useStore';
+import Login from './components/Login';
 
 // Simple placeholder components for other routes
 const Search = () => (
@@ -65,7 +66,7 @@ const App: React.FC = () => {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
           <Route path="/search" element={<Search />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/explore" element={<Explore />} />
